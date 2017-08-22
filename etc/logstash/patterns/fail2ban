@@ -1,0 +1,6 @@
+# fail2ban grok pattern
+F2B_DATE %{YEAR}-%{MONTHNUM}-%{MONTHDAY}[ ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})
+F2B_MSG %{GREEDYDATA:fail2ban.message}
+F2B_LEVEL %{WORD:fail2ban.level}
+F2B_JAIL \s*\[%{WORD:fail2ban.jail}\]
+F2B_ACTION \s*%{WORD:fail2ban.action}
